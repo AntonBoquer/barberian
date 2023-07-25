@@ -1,0 +1,38 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    /* Style to position buttons on top of the image */
+    .image-container {
+        position: relative;
+    }
+
+    .button-container {
+        position: absolute;
+        top: 55%; /* Adjust this value to lower or raise the buttons */
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .button-container a {
+        display: block;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="image-container">
+    <center>
+        <div class="button-container">
+            <a href="{% url 'service' %}" button type="button" class="btn btn-secondary btn-lg">Barbershop Supplies</a>
+            <a type="button" href="{% url 'products' %}" class="btn btn-secondary btn-lg">Beverages</a>
+            <a type="button" href="{% url 'inventory' %}" class="btn btn-secondary btn-lg">Current Stock</a>
+        </div>
+    </center>
+    <center>
+        <img src="{% static 'images/Front.PNG'%}">
+    </center>
+</div>
+
+{% endblock %}

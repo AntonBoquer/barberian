@@ -1,0 +1,293 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<p>Remove Drinks</p>
+
+  <button type="button" id="btn1" class="btn btn-primary btn-lg btn-block">J&B Urban Honey Scotch Whiskey</button>
+  <span>Count for J&B Urban Honey Scotch Whiskey: <span id="count1">0</span></span>
+  <br>
+  <button type="button" id="btn2" class="btn btn-primary btn-lg btn-block">	J&B Rare Scotch Whiskey</button>
+  <span>Count for J&B Rare Scotch Whiskey: <span id="count2">0</span></span>
+  <br>
+  <button type="button" id="btn3" class="btn btn-primary btn-lg btn-block">Evan Williams Kentucky Straight Bourbon Whiskey</button>
+  <span>Count for Evan Williams Kentucky Straight Bourbon Whiskey: <span id="count3">0</span></span>
+  <br>
+  <button type="button" id="btn4" class="btn btn-primary btn-lg btn-block">Jim Beam Kentucky Straight Bourbon Whiskey</button>
+  <span>Count for Jim Beam Kentucky Straight Bourbon Whiskey: <span id="count4">0</span></span>
+  <br>
+  <button type="button" id="btn5" class="btn btn-primary btn-lg btn-block">Johnnie Walker Blenders’ Batch Scotch Whiskey</button>
+  <span>Count for Johnnie Walker Blenders’ Batch Scotch Whiskey: <span id="count5">0</span></span>
+
+  <button type="button" id="btn6" class="btn btn-primary btn-lg btn-block">	Johnnie Walker Black Label Scotch Whiskey</button>
+  <span>Count for Johnnie Walker Black Label Scotch Whiskey: <span id="count6">0</span></span>
+  <br>
+
+  <button type="button" id="btn7" class="btn btn-primary btn-lg btn-block">Jack Daniel’s Old No. 7 Tennessee Sour Mash Whiskey</button>
+  <span>Count for Jack Daniel’s Old No. 7 Tennessee Sour Mash Whiskey: <span id="count7">0</span></span>
+  <br>
+
+  <button type="button" id="btn8" class="btn btn-primary btn-lg btn-block">Wild Turkey Kentucky Straight Bourbon Whiskey</button>
+  <span>Count for Wild Turkey Kentucky Straight Bourbon Whiskey: <span id="count8">0</span></span>
+  <br>
+
+  <button type="button" id="btn9" class="btn btn-primary btn-lg btn-block">Bushmills Irish Whiskey</button>
+  <span>Count for Bushmills Irish Whiskey: <span id="count9">0</span></span>
+  <br>
+
+  <button type="button" id="btn10" class="btn btn-primary btn-lg btn-block">Johnnie Walker Gold Label Reserve Scotch Whiskey</button>
+  <span>Count for Johnnie Walker Gold Label Reserve Scotch Whiskey: <span id="count10">0</span></span>
+  <br>
+
+  <button type="button" id="btn11" class="btn btn-primary btn-lg btn-block">Singleton Single Malt Scotch Whiskey</button>
+  <span>Count for Singleton Single Malt Scotch Whiskey: <span id="count11">0</span></span>
+  <br>
+
+  <button type="button" id="btn12" class="btn btn-primary btn-lg btn-block">Glenlivet 12 Years Single Malt Scotch Whiskey</button>
+  <span>Count for Glenlivet 12 Years Single Malt Scotch Whiskey: <span id="count12">0</span></span>
+  <br>
+
+  <button type="button" id="btn13" class="btn btn-primary btn-lg btn-block"> Nikka Pure Malt Whiskey</button>
+  <span>Count for Nikka Pure Malt Whiskey: <span id="count13">0</span></span>
+  <br>
+
+  <button type="button" id="btn14" class="btn btn-primary btn-lg btn-block">Shin Whiskey</button>
+  <span>Count for Shin Whiskey: <span id="count14">0</span></span>
+  <br>
+
+  <button type="button" id="btn15" class="btn btn-primary btn-lg btn-block">Kavalan Single Malt Whiskey</button>
+  <span>Count for Kavalan Single Malt Whiskey: <span id="count15">0</span></span>
+  <br>
+
+  <button type="button" id="btn16" class="btn btn-primary btn-lg btn-block">Bombay Gin</button>
+  <span>Count for Bombay Gin: <span id="count16">0</span></span>
+  <br>
+
+  <button type="button" id="btn17" class="btn btn-primary btn-lg btn-block">Hendricks Gin</button>
+  <span>Count for Hendricks Gin: <span id="count17">0</span></span>
+  <br>
+
+  <button type="button" id="btn18" class="btn btn-primary btn-lg btn-block">Tonic Water</button>
+  <span>Count for Tonic Water: <span id="count18">0</span></span>
+  <br>
+
+  <button type="button" id="btn19" class="btn btn-primary btn-lg btn-block">Bourbon Sour</button>
+  <span>Count for Bourbon Sour: <span id="count19">0</span></span>
+  <br>
+
+  <button type="button" id="btn20" class="btn btn-primary btn-lg btn-block">Local Beer</button>
+  <span>Count for Local Beer: <span id="count20">0</span></span>
+  <br>
+
+  <button type="button" id="btn21" class="btn btn-primary btn-lg btn-block">Imported Beer</button>
+  <span>Count for Imported Beer: <span id="count21">0</span></span>
+  <br>
+
+  <button type="button" id="btn22" class="btn btn-primary btn-lg btn-block">Nespresso</button>
+  <span>Count for Nespresso: <span id="count22">0</span></span>
+  <br>
+
+  <button type="button" id="btn23" class="btn btn-primary btn-lg btn-block">Green Tea</button>
+  <span>Count for Green Tea: <span id="count23">0</span></span>
+  <br>
+
+  <button type="button" id="btn24" class="btn btn-primary btn-lg btn-block">Soda</button>
+  <span>Count for Soda: <span id="count24">0</span></span>
+  <br>
+
+  <button type="button" id="acceptBtn" class="btn btn-outline-success">Accept</button>
+
+
+
+
+  <script>
+
+
+    var btn1 = document.getElementById('btn1');
+    var btn2 = document.getElementById('btn2');
+    var btn3 = document.getElementById('btn3');
+    var btn4 = document.getElementById('btn4');
+    var btn5 = document.getElementById('btn5');
+    var btn6 = document.getElementById('btn6');
+    var btn7 = document.getElementById('btn7');
+    var btn8 = document.getElementById('btn8');
+    var btn9 = document.getElementById('btn9');
+    var btn10 = document.getElementById('btn10');
+    var btn11 = document.getElementById('btn11');
+    var btn12 = document.getElementById('btn12');
+    var btn13 = document.getElementById('btn13');
+    var btn14 = document.getElementById('btn14');
+    var btn15 = document.getElementById('btn15');
+    var btn16 = document.getElementById('btn16');
+    var btn17 = document.getElementById('btn17');
+    var btn18 = document.getElementById('btn18');
+    var btn19 = document.getElementById('btn19');
+    var btn20 = document.getElementById('btn20');
+    var btn21 = document.getElementById('btn21');
+    var btn22 = document.getElementById('btn22');
+    var btn23 = document.getElementById('btn23');
+    var btn24 = document.getElementById('btn24');
+    var acceptBtn = document.getElementById('acceptBtn');
+
+    
+    var count1 = 0;
+    var count2 = 0;
+    var count3 = 0;
+    var count4 = 0;
+    var count5 = 0;
+    var count6 = 0;
+    var count7 = 0;
+    var count8 = 0;
+    var count9 = 0;
+    var count10 = 0;
+    var count11 = 0;
+    var count12 = 0;
+    var count13 = 0;
+    var count14 = 0;
+    var count15 = 0;
+    var count16 = 0;
+    var count17 = 0;
+    var count18 = 0;
+    var count19 = 0;
+    var count20 = 0;
+    var count21 = 0;
+    var count22 = 0;
+    var count23 = 0;
+    var count24 = 0;
+
+    btn1.addEventListener('click', function() {
+      count1++;
+      updateCountDisplay(count1, 'count1');
+    });
+
+    btn2.addEventListener('click', function() {
+      count2++;
+      updateCountDisplay(count2, 'count2');
+    });
+
+    btn3.addEventListener('click', function() {
+      count3++;
+      updateCountDisplay(count3, 'count3');
+    });
+
+    btn4.addEventListener('click', function() {
+      count4++;
+      updateCountDisplay(count4, 'count4');
+    });
+
+    btn5.addEventListener('click', function() {
+      count5++;
+      updateCountDisplay(count5, 'count5');
+    });
+
+    btn6.addEventListener('click', function() {
+      count6++;
+      updateCountDisplay(count6, 'count6');
+    });
+
+    btn7.addEventListener('click', function() {
+      count7++;
+      updateCountDisplay(count7, 'count7');
+    });
+
+    btn8.addEventListener('click', function() {
+      count8++;
+      updateCountDisplay(count, 'count');
+    });
+
+    btn9.addEventListener('click', function() {
+      count9++;
+      updateCountDisplay(count9, 'count9');
+    });
+
+    btn11.addEventListener('click', function() {
+      count11++;
+      updateCountDisplay(count11, 'count11');
+    });
+
+    btn12.addEventListener('click', function() {
+      count12++;
+      updateCountDisplay(count12, 'count12');
+    });
+
+    btn13.addEventListener('click', function() {
+      count13++;
+      updateCountDisplay(count13, 'count13');
+    });
+
+    btn14.addEventListener('click', function() {
+      count14++;
+      updateCountDisplay(count14, 'count14');
+    });
+
+    btn15.addEventListener('click', function() {
+      count15++;
+      updateCountDisplay(count15, 'count15');
+    });
+
+    btn16.addEventListener('click', function() {
+      count16++;
+      updateCountDisplay(count16, 'count16');
+    });
+
+    btn17.addEventListener('click', function() {
+      count17++;
+      updateCountDisplay(count17, 'count17');
+    });
+
+    btn18.addEventListener('click', function() {
+      count18++;
+      updateCountDisplay(count18, 'count18');
+    });
+
+    btn19.addEventListener('click', function() {
+      count19++;
+      updateCountDisplay(count19, 'count19');
+    });
+
+    btn20.addEventListener('click', function() {
+      count20++;
+      updateCountDisplay(count20, 'count20');
+    });
+
+    btn21.addEventListener('click', function() {
+      count21++;
+      updateCountDisplay(count21, 'count21');
+    });
+
+    btn22.addEventListener('click', function() {
+      count22++;
+      updateCountDisplay(count22, 'count22');
+    });
+
+    btn23.addEventListener('click', function() {
+      count23++;
+      updateCountDisplay(count23, 'count23');
+    });
+
+    btn24.addEventListener('click', function() {
+      count24++;
+      updateCountDisplay(count24, 'count24');
+    });
+
+
+
+
+  
+
+
+
+
+
+    function updateCountDisplay(count, countId) {
+      var countDisplay = document.getElementById(countId);
+      countDisplay.textContent = count;
+    }
+
+
+  </script>
+
+{% endblock %}
+
+

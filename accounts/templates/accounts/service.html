@@ -1,0 +1,21 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<center>
+<h1 class="display-5">Add Supplies</h1>
+
+<table border="5">
+    {% for x in supplie %}
+    <tr>
+        <td><a class="btn btn-sm" href="{% url 'updaterecord' x.id %}">Edit Value</a></td>    
+        <td>{{ x.name }}</td>
+        <td>{{ x.amount }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<a href="{% url 'home' %}" class="btn btn-primary btn-lg enabled" role="button" aria-disabled="false">Back</a>
+</center>
+{% endblock %}

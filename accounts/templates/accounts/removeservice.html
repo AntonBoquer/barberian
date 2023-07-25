@@ -1,0 +1,105 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+
+<p>Remove Supplies</p>
+
+
+
+  <button type="button" id="btn1" class="btn btn-primary btn-lg btn-block">Hand Sanitizers</button>
+  <span>Count for Hand Sanitizers: <span id="count1">0</span></span>
+  <br>
+  <button type="button" id="btn2" class="btn btn-primary btn-lg btn-block">	Organic Color</button>
+  <span>Count for Organic Color: <span id="count2">0</span></span>
+  <br>
+  <button type="button" id="btn3" class="btn btn-primary btn-lg btn-block">Neckstrips</button>
+  <span>Count for Neckstrips <span id="count3">0</span></span>
+  <br>
+  <button type="button" id="btn4" class="btn btn-primary btn-lg btn-block">Barbicide</button>
+  <span>Count for Barbicide: <span id="count4">0</span></span>
+  <br>
+  <button type="button" id="btn5" class="btn btn-primary btn-lg btn-block">Shampoo</button>
+  <span>Count for Shampoo: <span id="count5">0</span></span>
+
+  <button type="button" id="btn6" class="btn btn-primary btn-lg btn-block">	Pomades</button>
+  <span>Count for Pomades: <span id="count6">0</span></span>
+  <br>
+
+
+
+  <button type="button" id="acceptBtn" class="btn btn-outline-success">Accept</button>
+
+
+
+
+  <script>
+
+
+    var btn1 = document.getElementById('btn1');
+    var btn2 = document.getElementById('btn2');
+    var btn3 = document.getElementById('btn3');
+    var btn4 = document.getElementById('btn4');
+    var btn5 = document.getElementById('btn5');
+    var btn6 = document.getElementById('btn6');
+ 
+    var acceptBtn = document.getElementById('acceptBtn');
+
+    
+    var count1 = 0;
+    var count2 = 0;
+    var count3 = 0;
+    var count4 = 0;
+    var count5 = 0;
+    var count6 = 0;
+
+    btn1.addEventListener('click', function() {
+      count1++;
+      updateCountDisplay(count1, 'count1');
+    });
+
+    btn2.addEventListener('click', function() {
+      count2++;
+      updateCountDisplay(count2, 'count2');
+    });
+
+    btn3.addEventListener('click', function() {
+      count3++;
+      updateCountDisplay(count3, 'count3');
+    });
+
+    btn4.addEventListener('click', function() {
+      count4++;
+      updateCountDisplay(count4, 'count4');
+    });
+
+    btn5.addEventListener('click', function() {
+      count5++;
+      updateCountDisplay(count5, 'count5');
+    });
+
+    btn6.addEventListener('click', function() {
+      count6++;
+      updateCountDisplay(count6, 'count6');
+    });
+
+
+
+
+
+  
+
+
+
+
+
+    function updateCountDisplay(count, countId) {
+      var countDisplay = document.getElementById(countId);
+      countDisplay.textContent = count;
+    }
+
+
+  </script>
+
+{% endblock %}
+
+

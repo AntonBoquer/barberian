@@ -1,0 +1,35 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<br>
+<center>
+<h1>{{ mymember.name }}</h1>
+
+<form action="{% url 'updaterecord' mymember.id %}" method="post">
+  {% csrf_token %}
+  Update Value:<br>
+  <input name="amount" type="text" value="{{ mymember.amount }}" pattern="^\d+(\.\d{1,2})?$" oninput="validateInput(this)">
+  {% if amount_error %}
+    <p style="color: red;">{{ amount_error }}</p>
+  {% endif %}
+
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+</center>
+
+{% endblock %}
+
+<script>
+function validateInput(inputElement) {
+  var inputValue = inputElement.value;
+  var isValid = /^\d+(\.\d{1,2})?$/.test(inputValue);
+
+  if (!isValid || parseFloat(inputValue) < 0) {
+    inputElement.setCustomValidity("Please enter a non-negative number with up to two decimal places.");
+  } 
+  else {
+    inputElement.setCustomValidity("");
+  }
+}
+</script>
