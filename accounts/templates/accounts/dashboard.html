@@ -17,22 +17,21 @@
     }
 
     .button-container a {
-        display: block;
-        margin-bottom: 10px;
+        display: inline-block; /* Change display from 'block' to 'inline-block' */
+        margin: 0 5px; /* Add some horizontal margin between buttons if desired */
     }
 </style>
+<br>
+<br>
+<br>
+<br>
 
 <div class="image-container">
-    <center>
-        <div class="button-container">
-            <a href="{% url 'service' %}" button type="button" class="btn btn-secondary btn-lg">Barbershop Supplies</a>
-            <a type="button" href="{% url 'products' %}" class="btn btn-secondary btn-lg">Beverages</a>
-            <a type="button" href="{% url 'inventory' %}" class="btn btn-secondary btn-lg">Current Stock</a>
-        </div>
-    </center>
-    <center>
-        <img src="{% static 'images/Front.PNG'%}">
-    </center>
+    <div class="button-container">
+        <a href="{% url 'service' %}" class="btn btn-secondary btn-lg">Barbershop Supplies</a>
+        <a href="{% url 'products' %}" class="btn btn-secondary btn-lg">Beverages</a>
+        <a href="{% url 'inventory' %}" class="btn btn-secondary btn-lg">Current Stock</a>
+    </div>
 </div>
 
 {% endblock %}
